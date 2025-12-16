@@ -9,8 +9,9 @@ dotenv.config();
 connectDb();
 
 const app = express();
+app.use(express.json())
 
-app.use("/api/users", authRouter);
+app.use("/api/auth", authRouter);
 app.use("/api/products", productRouter);
 app.use("/api/orders", orderRouter);
 
