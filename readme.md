@@ -123,13 +123,13 @@ Add the following environment variables to your `.env` file:
 
 ```env
 # Server Configuration
-PORT=5001
+PORT=5000
 
 # Database Configuration
-MONGO_URI=mongodb+srv://kishanth1209:20021209kK$@cluster0.8xjafau.mongodb.net/?appName=Cluster0
+MONGO_URI=<MONGO_URI>
 
 # JWT Configuration
-JWT_SECRET=your_secret
+JWT_SECRET=<your_secret>
 
 ```
 
@@ -140,6 +140,7 @@ JWT_SECRET=your_secret
 ```bash
 npm run dev
 ```
+
 The API will be accessible at: **http://localhost:5001**
 
 ### API Documentation
