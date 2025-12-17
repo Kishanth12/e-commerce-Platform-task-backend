@@ -12,10 +12,10 @@ export const placeOrder = async (userId, items) => {
     const orderItems = [];
 
     for (const item of items) {
-      const product = await Product.findById(item.product).session(session);
+      const product = await Product.findById(item.productId).session(session);
 
       if (!product) {
-        throw new Error(`PRODUCT_NOT_FOUND:${item.product}`);
+        throw new Error(`PRODUCT_NOT_FOUND:${item.productId}`);
       }
 
       if (product.stockQuantity < item.quantity) {
