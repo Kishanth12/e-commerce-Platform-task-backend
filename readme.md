@@ -10,6 +10,9 @@ A comprehensive backend API for managing an e-commerce platform with authenticat
 - API Documentation
 - Installation
 - Configuration
+- Running the Server
+- API Documentation
+- Postman Collection
 
 ---
 
@@ -62,7 +65,6 @@ This API implements industry-standard practices including JWT authentication, ro
 
 - Input validation on all endpoints
 - Comprehensive error handling
-- Request/response logging
 
 ---
 
@@ -70,7 +72,7 @@ This API implements industry-standard practices including JWT authentication, ro
 
 ### Core Technologies
 
-- **Runtime:** Node.js (v16+)
+- **Runtime:** Node.js
 - **Framework:** Express.js
 - **Database:** MongoDB with Mongoose ODM
 - **Authentication:** JWT (jsonwebtoken)
@@ -87,10 +89,6 @@ This API implements industry-standard practices including JWT authentication, ro
 - **Version Control:** Git
 
 ---
-
-## Postman Collection
-
-Import `e-commerce-backend-task.postman_collection.json` in Postman to test all API endpoints easily.
 
 ## Installation
 
@@ -126,10 +124,10 @@ Add the following environment variables to your `.env` file:
 PORT=5001
 
 # Database Configuration
-MONGO_URI=mongodb+srv://kishanth1209:20021209kK$@cluster0.8xjafau.mongodb.net/?appName=Cluster0
+MONGO_URI=<MONGO_URI>
 
 # JWT Configuration
-JWT_SECRET=your_secret
+JWT_SECRET=<your_secret>
 
 ```
 
@@ -141,6 +139,12 @@ JWT_SECRET=your_secret
 npm run dev
 ```
 
-The API will be accessible at: **http://localhost:5001**
+---
+
+## Postman Collection
+
+You can import the Postman collection to test all API endpoints:
+
+[Download Postman Collection](./postman/e-commerce-backend-task.postman_collection.json)
 
 ---
