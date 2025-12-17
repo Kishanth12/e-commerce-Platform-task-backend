@@ -10,6 +10,9 @@ A comprehensive backend API for managing an e-commerce platform with authenticat
 - API Documentation
 - Installation
 - Configuration
+- Running the Server
+- API Documentation
+- Postman Collection
 
 ---
 
@@ -27,6 +30,7 @@ This API implements industry-standard practices including JWT authentication, ro
 - Order processing with stock management
 - Transaction-based order handling
 - Input validation with express-validator
+- API documentation using Swagger UI
 
 ---
 
@@ -62,7 +66,7 @@ This API implements industry-standard practices including JWT authentication, ro
 
 - Input validation on all endpoints
 - Comprehensive error handling
-- Request/response logging
+- Interactive API documentation with Swagger
 
 ---
 
@@ -70,7 +74,7 @@ This API implements industry-standard practices including JWT authentication, ro
 
 ### Core Technologies
 
-- **Runtime:** Node.js (v16+)
+- **Runtime:** Node.js
 - **Framework:** Express.js
 - **Database:** MongoDB with Mongoose ODM
 - **Authentication:** JWT (jsonwebtoken)
@@ -79,6 +83,7 @@ This API implements industry-standard practices including JWT authentication, ro
 ### Key Libraries
 
 - **Validation:** express-validator
+- **API Documentation:** swagger-jsdoc, swagger-ui-express
 - **Environment:** dotenv
 
 ### Development Tools
@@ -87,10 +92,6 @@ This API implements industry-standard practices including JWT authentication, ro
 - **Version Control:** Git
 
 ---
-
-## Postman Collection
-
-Import `e-commerce-backend-task.postman_collection.json` in Postman to test all API endpoints easily.
 
 ## Installation
 
@@ -148,5 +149,13 @@ The API will be accessible at: **http://localhost:5001**
 Interactive API documentation is available via Swagger UI:
 
 http://localhost:5001/api-docs
+
+---
+
+## Postman Collection
+
+You can import the Postman collection to test all API endpoints:
+
+[Download Postman Collection](./postman/e-commerce-backend-task.postman_collection.json)
 
 ---
