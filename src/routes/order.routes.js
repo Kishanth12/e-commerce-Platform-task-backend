@@ -8,6 +8,12 @@ import {
 } from "./../controller/order.controller.js";
 import { validate } from "./../middleware/validatorMiddleware.js";
 import { protectRoute } from "./../middleware/auth.middleware.js";
+import {
+  validateCancelOrder,
+  validateOrderIdParam,
+  validatePlaceOrderRules,
+  validateUpdateOrderStatus,
+} from "../validators/order.validator.js";
 
 const router = express.Router();
 
@@ -46,7 +52,13 @@ const router = express.Router();
  *       401:
  *         description: Unauthorized
  */
-router.post("/", protectRoute("customer"), validate, placeOrder);
+router.post(
+  "/",
+  protectRoute("customer"),
+  validatePlaceOrderRules,
+  validate,
+  placeOrder
+);
 
 /**
  * @openapi
@@ -86,7 +98,13 @@ router.get("/", protectRoute("admin", "customer"), getUserOrders);
  *       404:
  *         description: Order not found
  */
-router.get("/:id", protectRoute("admin", "customer"), getOrderById);
+router.get(
+  "/:id",
+  protectRoute("admin", "customer"),
+  validateOrderIdParam,
+  validate,
+  getOrderById
+);
 
 /**
  * @openapi
@@ -109,7 +127,13 @@ router.get("/:id", protectRoute("admin", "customer"), getOrderById);
  *       403:
  *         description: Forbidden
  */
-router.put("/cancel/:id", protectRoute("customer"), cancelOrder);
+router.put(
+  "/cancel/:id",
+  protectRoute("customer"),
+  validateCancelOrder,
+  validate,
+  cancelOrder
+);
 
 /**
  * @openapi
@@ -142,6 +166,12 @@ router.put("/cancel/:id", protectRoute("customer"), cancelOrder);
  *       403:
  *         description: Forbidden
  */
-router.patch("/status/:id", protectRoute("admin"), updateOrderStatus);
+router.patch(
+  "/status/:id",
+  protectRoute("admin"),
+  validateUpdateOrderStatus,
+  validate,
+  updateOrderStatus
+);
 
 export default router;
