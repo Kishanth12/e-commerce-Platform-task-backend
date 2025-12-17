@@ -123,7 +123,7 @@ Add the following environment variables to your `.env` file:
 
 ```env
 # Server Configuration
-PORT=5000
+PORT=5001
 
 # Database Configuration
 MONGO_URI=<MONGO_URI>
