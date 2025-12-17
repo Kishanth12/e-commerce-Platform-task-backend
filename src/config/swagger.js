@@ -33,12 +33,12 @@ const swaggerDefinition = {
 
 const options = {
   swaggerDefinition,
-  apis: ["./src/routes/*.js", "./src/models/*.js", "./controllers/*.js"],
+  apis: ["./src/routes/*.js", "./src/models/*.js", ".src/controllers/*.js"],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
 
-export const swaggerDocs = (app,port) => {
+export const swaggerDocs = (app, port) => {
   app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
   // JSON endpoint for swagger spec
