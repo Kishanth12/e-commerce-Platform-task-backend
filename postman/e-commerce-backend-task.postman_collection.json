@@ -345,7 +345,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"items\":[\r\n        {\r\n        \"product\":\"694184e14749b77e0b389220\",\r\n        \"quantity\":\"3\"\r\n        },\r\n        {\r\n          \"product\":\"69412c94d409444802986732\",\r\n        \"quantity\":\"4\"  \r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"productId\": \"69421b019c4da08adbe76fcd\",\r\n      \"quantity\": 2\r\n    },\r\n{\r\n\"productId\": \"69421bf79c4da08adbe76fe0\",\r\n      \"quantity\": 4\r\n}\r\n  ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
