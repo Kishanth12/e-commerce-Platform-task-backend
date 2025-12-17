@@ -11,7 +11,6 @@ A comprehensive backend API for managing an e-commerce platform with authenticat
 - Installation
 - Configuration
 - Running the Server
-- API Documentation
 - Postman Collection
 
 ---
@@ -32,6 +31,7 @@ This API implements industry-standard practices including JWT authentication, ro
 - Input validation with express-validator
 - HTTP request logging using Morgan
 - API documentation using Swagger UI
+- Dockerized for consistent environments
 
 ---
 
@@ -93,6 +93,7 @@ This API implements industry-standard practices including JWT authentication, ro
 
 - **Dev Server:** Nodemon
 - **Version Control:** Git
+- **Containerization: Docker, Docker Compose**
 
 ---
 
@@ -113,17 +114,7 @@ npm install
 
 ### Step 3: Create Environment File
 
-Create a `.env` file in the root directory:
-
-```bash
-.env
-```
-
----
-
-## Configuration
-
-Add the following environment variables to your `.env` file:
+Copy .env.example to `.env`
 
 ```env
 # Server Configuration
@@ -147,6 +138,26 @@ npm run dev
 
 The API will be accessible at: **http://localhost:5001**
 
+### Docker Setup
+
+Build and start containers:
+
+```bash
+docker compose up --build
+```
+
+Services included:
+
+- Node.js API → Port 5001
+
+- MongoDB → Port 27017
+
+Stop containers:
+
+```bash
+docker compose down
+```
+
 ### API Documentation
 
 Interactive API documentation is available via Swagger UI:
@@ -162,3 +173,7 @@ You can import the Postman collection to test all API endpoints:
 [Download Postman Collection](./postman/e-commerce-backend-task.postman_collection.json)
 
 ---
+
+```
+
+```
