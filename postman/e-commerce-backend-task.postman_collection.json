@@ -111,7 +111,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5001/api/auth/update-profile/6941846d4749b77e0b38921b",
+					"raw": "http://localhost:5001/api/auth/update-role/6941846d4749b77e0b38921b",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -120,7 +120,7 @@
 					"path": [
 						"api",
 						"auth",
-						"update-profile",
+						"update-role",
 						"6941846d4749b77e0b38921b"
 					]
 				}
