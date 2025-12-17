@@ -110,7 +110,7 @@ npm install
 Create a `.env` file in the root directory:
 
 ```bash
-touch .env
+ .env
 ```
 
 ---
