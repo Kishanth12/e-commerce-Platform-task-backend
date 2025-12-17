@@ -1,5 +1,5 @@
 import Order from "../models/Order.model.js";
-import Product from "../models/product.Model.js";
+import Product from "../models/Product.model.js";
 import mongoose from "mongoose";
 
 // Place a new order
