@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  #MongoDb services
+  mongo_db:
+    container_name: eCommerce_db
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: kishanth1209
+      MONGO_INITDB_ROOT_PASSWORD: 20021209kK$
+      MONGO_INITDB_DATABASE: eCommerce
+    volumes:
+      - mongo_db:/data/db
+
+  #Node API service
+  api:
+    container_name: eCommerce_api
+    build: .
+    ports:
+      - "5001:5001"
+    environment:
+      MONGODB_URL: mongodb://kishanth1209:20021209kK%24@mongo_db:27017/eCommerce?authSource=admin
+      PORT: 5001
+      JWT_SECRET: kishanth
+    depends_on:
+      - mongo_db
+
+volumes:
+  mongo_db: {}
