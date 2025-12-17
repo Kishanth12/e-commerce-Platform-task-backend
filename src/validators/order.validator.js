@@ -10,13 +10,12 @@ export const validatePlaceOrderRules = [
     .withMessage("Items must be an array with at least one product")
     .bail(),
 
-  body("items.*.product")
+  body("items.*.productId")
     .notEmpty()
     .withMessage("Product ID is required")
     .bail()
     .isMongoId()
-    .withMessage("Product ID must be a valid MongoDB ID")
-    .bail(),
+    .withMessage("Product ID must be a valid MongoDB ID"),
 
   body("items.*.quantity")
     .isInt({ min: 1 })
