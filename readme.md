@@ -140,7 +140,12 @@ JWT_SECRET=your_secret
 ```bash
 npm run dev
 ```
-
 The API will be accessible at: **http://localhost:5001**
+
+### API Documentation
+
+Interactive API documentation is available via Swagger UI:
+
+http://localhost:5001/api-docs
 
 ---
